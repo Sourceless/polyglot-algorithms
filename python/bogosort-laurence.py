@@ -1,4 +1,4 @@
-import random
+import random, itertools
 
 def bogosort(l):
     '''
@@ -11,7 +11,7 @@ def is_sorted(l):
     '''
     Checks if a list is sorted.
     '''
-    for i, j in zip(l, l[1:]):
+    for i, j in itertools.izip(l, l[1:]):
         if i > j:
             return False
     return True
